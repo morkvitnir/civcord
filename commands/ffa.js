@@ -35,8 +35,6 @@ module.exports = {
 
                     resultingText += `${leaderObject.avatarId} ${leaderObject.name} (${leaderObject.country})\n`;
                 }
-
-                resultingText += "\n";
             }
 
 
