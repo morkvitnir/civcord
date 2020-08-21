@@ -1,7 +1,7 @@
 "use strict";
 
 const shuffle = require("shuffle-array");
-
+const fs = require("fs");
 
 module.exports = class ShuffledLeaders {
 
@@ -9,7 +9,7 @@ module.exports = class ShuffledLeaders {
         shuffle(this._leaders);
     }
 
-    _leaders = require("./leaders.json");
+    _leaders = JSON.parse(fs.readFileSync("./leaders/leaders.json"));
 
     // Eleanor uniqueness flag
     eleanorPoped = false;
