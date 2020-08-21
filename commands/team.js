@@ -1,12 +1,16 @@
 "use strict";
-const Discord = require('discord.js');
-const fs = require("fs");
+
 
 const ShuffledLeaders = require("../leaders/ShuffledLeaders");
 
 module.exports = {
-    name: "tm",
-    description: "Lists 2 random leaders for each player in TM",
+    name: "team",
+    format: "civ team <количество игроков> (collective)",
+    description: `*<количество игроков>* - общее количество игроков от 2 до 6 на команду включительно
+    *collective* - опциональный аргумент, при использовании которого на команду выдается общий пул лидеров\n
+    *Примеры использования:
+    civ team 4
+    civ team 3 collective*`,
     execute(message, args) {
 
         try {
