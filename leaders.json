@@ -1,0 +1,267 @@
+[
+    {
+        "name": "Джон Кэтрин",
+        "avatarId": "<:JohnCurtin:746003418342096976>",
+        "country": "Австралия"
+    },
+    [
+        {
+            "name": "Теодор Рузвельт - Мужественный всадник",
+            "avatarId": "<:TeddyRooseveltRoughRider:746137026759491594>",
+            "country": "Америка"
+        },
+        {
+            "name": "Теодор Рузвельт - Прогрессивист",
+            "avatarId": "<:TeddyRoosevelt:746003418493092010>",
+            "country": "Америка"
+        }
+    ],
+    [
+        {
+            "name": "Виктория",
+            "avatarId": "<:Victoria:746137353449504949>",
+            "country": "Англия"
+        },
+        {
+            "name": "Алиенора Аквитанская",
+            "avatarId": "<:EleanorofAquitaine:746138398464671774>",
+            "country": "Англия"
+        }
+    ],
+    {
+        "name": "Саладин",
+        "avatarId": "<:Saladin:746139725815087215>",
+        "country": "Аравия"
+    },
+    {
+        "name": "Монтесума",
+        "avatarId": ":Montezuma:746139892140081253",
+        "country": "Ацтеки"
+    },
+    {
+        "name": "Педру II",
+        "avatarId": "<:PedroII:746140023426121899>",
+        "country": "Бразалия"
+    },
+    {
+        "name": "Матвей I Корвин",
+        "avatarId": "<:MatthiasCorvinus:746140131488169984>",
+        "country": "Венгрия"
+    },
+    {
+        "name": "Фридрих Барбаросса",
+        "avatarId": "<:FrederickBarbarossa:746140292016504882>",
+        "country": "Германия"
+    },
+    [
+        {
+            "name": "Горго",
+            "avatarId": "<:Gorgo:746140507708850200>",
+            "country": "Греция"
+        },
+        {
+            "name": "Перикл",
+            "avatarId": "<:Pericles:746140602017644586>",
+            "country": "Греция"
+        }
+    ],
+    {
+        "name": "Тамара",
+        "avatarId": "<:Tamar:746140708607492167>",
+        "country": "Грузия"
+    },
+    {
+        "name": "Клеопатра",
+        "avatarId": "<:Cleopatra:746140949842886708>",
+        "country": "Египет"
+    },
+    {
+        "name": "Шака",
+        "avatarId": "<:Shaka:746141051567210570>",
+        "country": "Зулусы"
+    },
+    [
+        {
+            "name": "Ганди",
+            "avatarId": "<:Gandhi:746141117552001094>",
+            "country": "Индия"
+        },
+        {
+            "name": "Чандрагупта Маурья",
+            "avatarId": "<:Chandragupta:746141297353687160>",
+            "country": "Индия"
+        }
+    ],
+    {
+        "name": "Трибхувана",
+        "avatarId": "<:Gitarja:746141797973229579>",
+        "country": "Индонезия"
+    },
+    {
+        "name": "Пачакутек",
+        "avatarId": "<:Pachacuti:746141898200186881>",
+        "country": "Инки"
+    },
+    {
+        "name": "Филипп II",
+        "avatarId": "<:PhilipII:746142002105548800>",
+        "country": "Испания"
+    },
+    {
+        "name": "Вильфрид Лорье",
+        "avatarId": "<:WilfridLaurier:746142317727056012>",
+        "country": "Канада"
+    },
+    {
+        "name": "Цинь Шихуанди",
+        "avatarId": "<:QinShiHuang:746142596564254730>",
+        "country": "Китай"
+    },
+    {
+        "name": "Симон Боливар",
+        "avatarId": "<:SimonBolivar:746143450369622059>",
+        "country": "Колумбия"
+    },
+    {
+        "name": "Мвемба а Нзинга",
+        "avatarId": "<:MvembaaNzinga:746143651012542567>",
+        "country": "Конго"
+    },
+    {
+        "name": "Сондок",
+        "avatarId": "<:Seondeok:746143968181485698>",
+        "country": "Корея"
+    },
+    {
+        "name": "Паундмейкер",
+        "avatarId": "<:Poundmaker:746144134368198769>",
+        "country": "Кри"
+    },
+    {
+        "name": "Джайаварман VII",
+        "avatarId": "<:JayavarmanVII:746144524232818718>",
+        "country": "Кхмеры"
+    },
+    {
+        "name": "Иш-Вак-Чан-Ахав",
+        "avatarId": "<:LadySixSky:746144776184922114>",
+        "country": "Майя"
+    },
+    {
+        "name": "Александр",
+        "avatarId": "<:Alexander:746144948465958962>",
+        "country": "Македония"
+    },
+    {
+        "name": "Манса Муса",
+        "avatarId": "<:MansaMusa:746145174274441276>",
+        "country": "Мали"
+    },
+    {
+        "name": "Купе",
+        "avatarId": "<:Kupe:746145276292497510>",
+        "country": "Кхмеры"
+    },
+    {
+        "name": "Чингис Хан",
+        "avatarId": "<:GenghisKhan:746145657630228520>",
+        "country": "Монголия"
+    },
+    {
+        "name": "Лаутаро",
+        "avatarId": "<:Lautaro:746145733815697409>",
+        "country": "Мапуче"
+    },
+    {
+        "name": "Вильгельмина",
+        "avatarId": "<:Wilhelmina:746146141715824790>",
+        "country": "Нидерланды"
+    },
+    {
+        "name": "Харальд Суровый",
+        "avatarId": "<:HaraldHardrada:746146234842218498>",
+        "country": "Норвегия"
+    },
+    {
+        "name": "Аманиторе",
+        "avatarId": "<:Amanitore:746147410543116378>",
+        "country": "Нубия"
+    },
+    {
+        "name": "Сулейман",
+        "avatarId": "<:Suleiman:746147888115089481>",
+        "country": "Оттоманы"
+    },
+    {
+        "name": "Кир",
+        "avatarId": "<:Cyrus:746148644553621597>",
+        "country": "Персия"
+    },
+    {
+        "name": "Ядвига",
+        "avatarId": "<:Jadwiga:746148932396253244>",
+        "country": "Польша"
+    },
+    {
+        "name": "Траян",
+        "avatarId": "<:Trajan:746149175971938456>",
+        "country": "Рим"
+    },
+    {
+        "name": "Петр Великий",
+        "avatarId": "<:Peter:746150228847099964>",
+        "country": "Россия"
+    },
+    {
+        "name": "Томирис",
+        "avatarId": "<:Tomyris:746150893560528902>",
+        "country": "Скифия"
+    },
+    {
+        "name": "Дидона",
+        "avatarId": ":Dido:746151376119398451",
+        "country": "Финикия"
+    },
+    [
+        {
+            "name": "Екатерина Медичи - Черная королева",
+            "avatarId": "<:CatherinedeMedici:746151979654316044>",
+            "country": "Франция"
+        },
+        {
+            "name": "Екатерина Медичи - Великолепная",
+            "avatarId": "<:CatherinedeMediciMagnificence:746155722827628634>",
+            "country": "Франция"
+        },
+        {
+            "name": "Алиенора Аквитанская",
+            "avatarId": "<:EleanorofAquitaine:746138398464671774>",
+            "country": "Франция"
+        }
+    ],
+    {
+        "name": "Кристина",
+        "avatarId": "<:Kristina:746157096088764478>",
+        "country": "Швеция"
+    },
+    {
+        "name": "Роберт I Брюс",
+        "avatarId": "<:RoberttheBruce:746157422195769445>",
+        "country": "Шотландия"
+    },
+    {
+        "name": "ГилХодзе Токимунэьгамеш",
+        "avatarId": "<:Gilgamesh:746157950976131093>",
+        "country": "Шумерия"
+    },
+    {
+        "name": "Менелик II",
+        "avatarId": "<:MenelikII:746158297639419966>",
+        "country": "Эфиопия"
+    },
+    {
+        "name": "Ходзе Токимунэ",
+        "avatarId": "<:HojoTokimune:746158488270536854>",
+        "country": "Япония"
+    }
+]
