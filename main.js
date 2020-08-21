@@ -31,23 +31,27 @@ client.once('ready', () => {
 
 client.on('message', (message) => {
 
-    // ignore messages not starting with civ prefix or from other bots
-    if (!message.content.startsWith(config.prefix) || message.author.bot) return;
+    try {
+        // ignore messages not starting with civ prefix or from other bots
+        if (!message.content.startsWith(config.prefix) || message.author.bot) return;
 
-    // get words coming after the prefix
-    const args = message.content.slice(config.prefix.length + 1).trim().split(/ +/);
-    // get a command right after the prefix
-    const commandName = args.shift().toLowerCase();
+        // get words coming after the prefix
+        const args = message.content.slice(config.prefix.length + 1).trim().split(/ +/);
+        // get a command right after the prefix
+        const commandName = args.shift().toLowerCase();
 
-    // if the command does not exist
-    if (!client.commands.has(commandName)) {
-        message.reply(`there is no such command. Correct template is "civ <command>".\n\nTo get the full command list write "civ help".`);
+        // if the command does not exist
+        if (!client.commands.has(commandName)) {
+            throw new Error(`такой команды не существует. Правильный формат ввода "civ <конанда> <аргумент>".\n\nЧтобы получить полный список команд напишите "civ help".`);
+        }
 
-        return;
+        // get and execute the command
+        const command = client.commands.get(commandName);
+        command.execute(message, args);
+    }
+    catch (error) {
+        message.reply(error.message);
     }
 
-    // get and execute the command
-    const command = client.commands.get(commandName);
-    command.execute(message, args);
 
-});
+}); 
