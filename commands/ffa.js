@@ -1,12 +1,14 @@
 "use strict";
-const Discord = require('discord.js');
-const fs = require("fs");
+
 
 const ShuffledLeaders = require("../leaders/ShuffledLeaders");
 
 module.exports = {
     name: "ffa",
-    description: "Lists 2 random leaders for each player in FFA",
+    format: "civ ffa <количество игроков>",
+    description: `*<количество игроков>* - общее количество игроков от 2 до 12 включительно\n
+    *Пример использования:
+    civ ffa 8*`,
     execute(message, args) {
 
         try {
