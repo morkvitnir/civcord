@@ -17,7 +17,7 @@ module.exports = {
 
             // check if argument array is not empty
             if (args.length == 0) {
-                throw new Error("неправильный формат ввода.\n Коректный: civ tm <количество игроков в каждой команде>.");
+                throw new Error("неправильный формат ввода.\n Корректный: civ tm <количество игроков в каждой команде>.");
             }
             // check if number of players is correct
             else if (args[0] > 12 || args[0] < 2) {
