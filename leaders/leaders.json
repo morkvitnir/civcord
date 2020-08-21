@@ -219,7 +219,7 @@
     },
     {
         "name": "Дидона",
-        "avatarId": ":Dido:746003418639892561",
+        "avatarId": "<:Dido:746003418639892561>",
         "country": "Финикия"
     },
     [
@@ -235,7 +235,7 @@
         },
         {
             "name": "Алиенора Аквитанская",
-            "avatarId": "<:EleanorofAquitaine:`746003419017511073`>",
+            "avatarId": "<:EleanorofAquitaine:746003419017511073>",
             "country": "Франция"
         }
     ],
