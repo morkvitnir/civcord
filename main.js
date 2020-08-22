@@ -42,7 +42,7 @@ client.on('message', (message) => {
 
         // if the command does not exist
         if (!client.commands.has(commandName)) {
-            throw new Error(`такой команды не существует. Правильный формат ввода "civ <конанда> <аргумент>".\n\nЧтобы получить полный список команд напишите "civ help".`);
+            throw new Error(`такой команды не существует. Правильный формат ввода "civ <команда> <аргумент>".\n\nЧтобы получить полный список команд напишите "civ help".`);
         }
 
         // get and execute the command

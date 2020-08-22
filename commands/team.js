@@ -28,7 +28,7 @@ module.exports = {
             let shuffledLeaders = new ShuffledLeaders();
 
             // a string holding all results
-            let resultingText = "**TM**\n\n";
+            let resultingText = "**Team**\n\n";
 
             // colective pull or not
             if (args[1] == "collective") {
