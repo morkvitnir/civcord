@@ -18,7 +18,7 @@ module.exports = {
     description: "",
     execute(message, args) {
 
-        // create an ember message
+        // create an embed message
         let messageEmbed = {
             color: 0x0099ff,
             title: "Доступные режимы",
