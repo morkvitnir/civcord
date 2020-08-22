@@ -25,22 +25,35 @@ module.exports = {
             // initialize with a ShuffledLeaders class
             let shuffledLeaders = new ShuffledLeaders();
 
-            // a string holding all results
-            let resultingText = "**FFA**\n\n";
+
+            // create an embed message
+            let messageEmbed = {
+                color: 0x0099ff,
+                title: "FFA",
+                fields: [
+
+                ]
+            };
 
             // iterate over each player
             for (let playerNumber = 1; playerNumber <= args[0]; playerNumber++) {
-                resultingText += `**Игрок ${playerNumber}**\n`;
+
+                let leaderString = "";
 
                 for (let leaderNumber = 1; leaderNumber <= 2; leaderNumber++) {
                     const leaderObject = shuffledLeaders.getLeader();
 
-                    resultingText += `${leaderObject.avatarId} ${leaderObject.name} (${leaderObject.country})\n`;
+                    leaderString += `${leaderObject.avatarId} ${leaderObject.name} (${leaderObject.country})\n`;
                 }
+
+                messageEmbed.fields.push({
+                    name: `Игрок ${playerNumber}`,
+                    value: leaderString
+                });
             }
 
 
-            message.channel.send(resultingText);
+            message.channel.send({ embed: messageEmbed });
 
         }
         catch (error) {
