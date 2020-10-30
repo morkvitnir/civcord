@@ -1,5 +1,5 @@
 {
-  "name": "discord-civ-bot",
+  "name": "civcord",
   "version": "1.0.0",
   "description": "A bot for picking leaders in Civilization 6",
   "main": "main.js",
@@ -11,5 +11,8 @@
   "dependencies": {
     "discord.js": "^12.3.1",
     "shuffle-array": "^1.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.6"
   }
 }
