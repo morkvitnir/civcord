@@ -1,9 +1,11 @@
-"use strict";
+//import leaders
+import ShuffledLeaders from "../ShuffledLeaders";
+
+// import interfaces
+import { Command, EmbedResponse, Leader } from "../interfaces";
 
 
-const ShuffledLeaders = require("../leaders/ShuffledLeaders");
-
-module.exports = {
+const command: Command = {
     name: "team",
     format: "civ team <количество игроков> (collective)",
     description: `*<количество игроков>* - общее количество игроков от 2 до 6 на команду включительно
@@ -17,22 +19,23 @@ module.exports = {
 
             // check if argument array is not empty
             if (args.length == 0) {
-                throw new Error("неправильный формат ввода.\n Корректный: civ tm <количество игроков в каждой команде>.");
+                message.reply(`неправильный формат ввода.\n Корректный: ${this.format}.`);
+                return;
             }
             // check if number of players is correct
-            else if (args[0] > 12 || args[0] < 2) {
-                throw new Error("набрано неправильное количество игроков.\n Значение должно быть от 2 до 6 для каждой команды включительно.");
+            else if (Number(args[0]) > 12 || Number(args[0]) < 2) {
+                message.reply("набрано неправильное количество игроков.\n Значение должно быть от 2 до 6 для каждой команды включительно.");
+                return;
             }
 
             // initialize with a ShuffledLeaders class
             let shuffledLeaders = new ShuffledLeaders();
 
             // create an embed message
-            let messageEmbed = {
+            let messageEmbed: EmbedResponse = {
                 color: 0x0099ff,
-                title: "Командная игра",
+                title: "FFA",
                 fields: [
-
                 ]
             };
 
@@ -40,12 +43,12 @@ module.exports = {
             if (args[1] == "collective") {
 
                 // iterate of each team
-                for (let teamNumber = 1; teamNumber <= 2; teamNumber++) {
+                for (let teamNumber: number = 1; teamNumber <= 2; teamNumber++) {
 
-                    let leaderString = "";
+                    let leaderString: string;
 
-                    for (let leaderNumber = 1; leaderNumber <= 2 * args[0]; leaderNumber++) {
-                        const leaderObject = shuffledLeaders.getLeader();
+                    for (let leaderNumber = 1; leaderNumber <= 2 * Number(args[0]); leaderNumber++) {
+                        const leaderObject: Leader = shuffledLeaders.getLeader();
 
                         leaderString += `${leaderObject.avatarId} ${leaderObject.name} (${leaderObject.country})\n`;
                     }
@@ -59,19 +62,19 @@ module.exports = {
             }
             else {
                 // iterate of each team
-                for (let teamNumber = 1; teamNumber <= 2; teamNumber++) {
+                for (let teamNumber: number = 1; teamNumber <= 2; teamNumber++) {
                     messageEmbed.fields.push({
                         name: "\u200B",
                         value: `**Команда ${teamNumber}**`
                     });
 
                     // iterate over each player
-                    for (let playerNumber = 1; playerNumber <= args[0]; playerNumber++) {
+                    for (let playerNumber: number = 1; playerNumber <= Number(args[0]); playerNumber++) {
 
-                        let leaderString = "";
+                        let leaderString: string;
 
-                        for (let leaderNumber = 1; leaderNumber <= 2; leaderNumber++) {
-                            const leaderObject = shuffledLeaders.getLeader();
+                        for (let leaderNumber: number = 1; leaderNumber <= 2; leaderNumber++) {
+                            const leaderObject: Leader = shuffledLeaders.getLeader();
 
                             leaderString += `${leaderObject.avatarId} ${leaderObject.name} (${leaderObject.country})\n`;
                         }
@@ -79,7 +82,7 @@ module.exports = {
                         messageEmbed.fields.push({
                             name: `Игрок ${playerNumber}`,
                             value: leaderString
-                        })
+                        });
                     }
                 }
             }
@@ -88,7 +91,9 @@ module.exports = {
 
         }
         catch (error) {
-            message.reply(error.message);
+            console.log(error.message);
         }
     }
-}
+};
+
+export default command;

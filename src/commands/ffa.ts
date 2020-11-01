@@ -1,9 +1,11 @@
-"use strict";
+//import leaders
+import ShuffledLeaders from "../ShuffledLeaders";
+
+// import interfaces
+import { Command, EmbedResponse, Leader } from "../interfaces";
 
 
-const ShuffledLeaders = require("../leaders/ShuffledLeaders");
-
-module.exports = {
+const command: Command = {
     name: "ffa",
     format: "civ ffa <количество игроков>",
     description: `*<количество игроков>* - общее количество игроков от 2 до 12 включительно\n
@@ -15,33 +17,34 @@ module.exports = {
 
             // check if argument array is not empty
             if (args.length == 0) {
-                throw new Error("неправильный формат ввода.\n Корректный: civ ffa <количество игроков>.");
+                message.reply(`неправильный формат ввода.\n Корректный: ${this.format}.`);
+                return;
             }
             // check if number of players is correct
-            else if (args[0] > 12 || args[0] < 2) {
-                throw new Error("набрано неправильное количество игроков.\n Значение должно быть от 2 до 12 включительно.");
+            else if (Number(args[0]) > 12 || Number(args[0]) < 2) {
+                message.reply("набрано неправильное количество игроков.\n Значение должно быть от 2 до 12 включительно.");
+                return;
             }
 
-            // initialize with a ShuffledLeaders class
+            // initialize a ShuffledLeaders class
             let shuffledLeaders = new ShuffledLeaders();
 
 
             // create an embed message
-            let messageEmbed = {
+            let messageEmbed: EmbedResponse = {
                 color: 0x0099ff,
                 title: "FFA",
                 fields: [
-
                 ]
             };
 
             // iterate over each player
-            for (let playerNumber = 1; playerNumber <= args[0]; playerNumber++) {
+            for (let playerNumber: number = 1; playerNumber <= Number(args[0]); playerNumber++) {
 
-                let leaderString = "";
+                let leaderString: string = "";
 
-                for (let leaderNumber = 1; leaderNumber <= 2; leaderNumber++) {
-                    const leaderObject = shuffledLeaders.getLeader();
+                for (let leaderNumber: number = 1; leaderNumber <= 2; leaderNumber++) {
+                    const leaderObject: Leader = shuffledLeaders.getLeader();
 
                     leaderString += `${leaderObject.avatarId} ${leaderObject.name} (${leaderObject.country})\n`;
                 }
@@ -57,7 +60,9 @@ module.exports = {
 
         }
         catch (error) {
-            message.reply(error.message);
+            console.log(error.message);
         }
     }
-}
+};
+
+export default command;
