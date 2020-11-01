@@ -8,9 +8,11 @@
         "noImplicitAny": true,
         "noImplicitReturns": true,
         "noImplicitThis": true,
-        "resolveJsonModule": true
+        "resolveJsonModule": true,
+        "allowJs": false,
+        "skipLibCheck": true
     },
     "exclude": [
-        "node_modules"
+        "node_modules/"
     ]
 }
