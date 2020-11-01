@@ -6,7 +6,7 @@ import { Leader } from "./interfaces";
 export default class {
 
     // array containing all leaders
-    private _leaders: Array<Leader | Leader[]> = JSON.parse(fs.readFileSync("./leaders/leaders.json") as any);
+    private _leaders: Array<Leader | Leader[]> = JSON.parse(fs.readFileSync("./src/assets/leaders.json") as any);
 
     // Eleanor uniqueness flag
     private _eleanorPopped: boolean = false;
