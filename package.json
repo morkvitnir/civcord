@@ -8,7 +8,7 @@
     "ts": "ts-node ./src/main.ts"
   },
   "author": "Mørkvitnir",
-  "license": "ISC",
+  "license": "Apache License 2.0",
   "private": true,
   "dependencies": {
     "discord.js": "^12.3.1",
