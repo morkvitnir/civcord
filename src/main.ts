@@ -1,24 +1,28 @@
 // import modules
+import config from "./discord-config";
 import * as Discord from "discord.js";
-import * as config from "./config.json";
 import * as fs from "fs";
+import * as path from "path";
+
 
 // import interfaces
 import { Command } from "./interfaces";
 
 // import commands
+const ext = path.extname(__filename);
+const dir = ext == ".ts" ? "src" : "dist";
+
 const commands: Map<string, Command> = new Map();
-const commandFiles: string[] = fs.readdirSync("./commands").filter(file => file.endsWith(".ts"));
+const commandFiles: string[] = fs.readdirSync(`./${dir}/commands`).filter((file: string) => file.endsWith(ext));
 
 for (const file of commandFiles) {
+
     import(`./commands/${file}`)
-        .then((command: Command) => {
-            commands.set(command.name, command);
+        .then((defaultImport: { default: Command; }) => {
+            commands.set(defaultImport.default.name, defaultImport.default);
         });
     // end of promise chain
 }
-
-
 
 // initialize the bot
 const client: Discord.Client = new Discord.Client();
@@ -27,10 +31,15 @@ client.login(config.token);
 
 client.once("ready", () => {
 
+    // set activity
+    client.user.setActivity("with 'civ help'", { type: "PLAYING" });
+
+    // refresh activity every hour
+    setInterval(() => client.user.setActivity("with 'civ help'", { type: "PLAYING" }), 360 * 1000);
+
     console.log("Bot is running.");
 
 });
-
 
 client.on('message', (message) => {
 
@@ -44,8 +53,8 @@ client.on('message', (message) => {
         const commandName: string = args.shift().toLowerCase();
 
         // if the command does not exist
-        if (commands.has(commandName)) {
-            message.reply("No such command message");
+        if (!commands.has(commandName)) {
+            message.reply("no such command message");
             return;
         }
 
@@ -54,7 +63,7 @@ client.on('message', (message) => {
         command.execute(message, args);
     }
     catch (error) {
-        message.reply(error.message);
+        console.log(error.message);
     }
 
 
